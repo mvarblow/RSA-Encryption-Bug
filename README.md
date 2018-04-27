@@ -18,7 +18,7 @@ To demonstrate the problem using the sample application:
 4. From a console window, cd to the folder containing the console application and then run the following command: _.\ConsoleApp rsa_
 5. In Task Manager, locate ConsoleApp.exe and create a memory dump.
 6. Use the sysinternals strings utility to scan the memory dump for ascii data: _strings C:\Users\admin\AppData\Local\Temp\ConsoleApp.DMP > strings.txt_
-7. Open the strings.txt file in a text editor and search for the clear text data: 2223000010309703
+7. Check the strings.txt file for the clear text data - 2223000010309703. E.g. from the command prompt run: _find "2223000010309703" C:\Users\admin\AppData\Local\Temp\ConsoleApp.DMP
 
 This will demonstrate the problem using the RSACryptoServiceProvider. To demonstrate the problem using RSACng, change the command in 
 step two to: _.\ConsoleApp cng_
